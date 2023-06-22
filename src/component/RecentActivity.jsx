@@ -46,6 +46,7 @@ const activityData = [
         title: 'Lorem Ipsum is simply dummy text',
         subTitle: 'Lorem Ipsum is simply dummy text',
         desc: 'Lorem Ipsum is simply dummy text of the printing. ',
+        highlighted_text:'Lorem Ipsum',
         subDesc: 'EXAMPLE COMPANY (PVT) LTD is a team of experienced mobile and web applications and website builders measuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android  & IOS. ',
         activityImg: '/images/activities/activity1.png'
     },
@@ -54,6 +55,7 @@ const activityData = [
         title: 'Lorem Ipsum is simply dummy text',
         subTitle: 'Lorem Ipsum is simply dummy text',
         desc: 'Lorem Ipsum is simply dummy text of the printing.',
+        highlighted_text:'Lorem Ipsum',
         subDesc: 'EXAMPLE COMPANY (PVT) LTD is a team of experienced mobile and web applications and website builders measuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android  & IOS. ',
         activityImg: '/images/activities/activity2.png'
     },
@@ -62,6 +64,7 @@ const activityData = [
         title: 'Lorem Ipsum is simply dummy text',
         subTitle: 'Lorem Ipsum is simply dummy text',
         desc: 'Lorem Ipsum is simply dummy text of the printing. ',
+        highlighted_text:'Lorem Ipsum',
         subDesc: 'EXAMPLE COMPANY (PVT) LTD is a team of experienced mobile and web applications and website builders measuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android  & IOS. ',
         activityImg: '/images/activities/activity3.png'
     }

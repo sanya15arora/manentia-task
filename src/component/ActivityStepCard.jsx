@@ -14,7 +14,7 @@ const DetailSection = styled(Stack)(({theme}) => ({
     alignItems: 'left',
     marginLeft: '120px',
     marginRight: '40px',
-    maxWidth: '50%',
+    maxWidth: '35%',
     justifyContent: 'space-evenly',
     [theme.breakpoints.down('md')]: {
         margin: '40px',
@@ -28,7 +28,7 @@ const TitleSection = styled(Stack)({
     alignItems: 'center'
 })
 
-const HappyIcon = styled(Stack)(({ bgColor}) => ({
+const HappyIcon = styled(Stack)(({bgColor}) => ({
 
     justifyContent: 'center',
     alignItems: 'center',
@@ -68,6 +68,12 @@ const Img = styled('img')(({theme, purpleBg}) => ({
 
 export default function ActivityStepCard({activityData, index}) {
 
+
+    const getNewDesc = (desc, highlighted_text) => {
+        return desc?.replace(highlighted_text,
+            `<span style="color: #1090CB;font-family: inherit;">${highlighted_text}</span>`)
+    }
+
     return (
         <Wrapper sx={{flexDirection: index % 2 === 0 ? 'row' : 'row-reverse'}}>
             <DetailSection spacing={2}>
@@ -82,9 +88,7 @@ export default function ActivityStepCard({activityData, index}) {
                             {activityData?.subTitle}</SubDesc>
                     </Stack>
                 </TitleSection>
-                <Desc>
-                    <span style={{color: '#1090CB'}}>Lorem Ipsum</span> is simply dummy text of the printing.
-                </Desc>
+                <Desc dangerouslySetInnerHTML={{__html: getNewDesc(activityData.desc, activityData.highlighted_text)}}/>
                 <SubDesc>
                     {activityData?.subDesc}
                 </SubDesc>
