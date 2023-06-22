@@ -67,13 +67,14 @@ const Btn = styled(Button)(({theme}) => ({
     background: '#000000',
     height: '67px',
     width: '173px',
-    color: '#fff',
+    '&:hover':{
+        backgroundColor: '#545454',
+
+    },
     [theme.breakpoints.down('md')]: {
         height: '67px',
         width: '35vw',
         maxWidth: '173px',
-
-
     }
 
 }))
