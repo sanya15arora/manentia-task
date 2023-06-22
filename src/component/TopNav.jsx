@@ -47,16 +47,32 @@ export default function TopNav() {
             <img src={'/images/LOGO.png'} alt={"LOGO"} style={{width: '100px', height: '40px'}}/>
             <NavList>
                 <NavButton style={{color: selectedBtn === 'home' ? '#1090CB' : '#000000'}}
-                           onClick={() => setSelectedBtn('home')}>Home</NavButton>
+                           onClick={() => {
+                               setSelectedBtn('home');
+                               alert("HomeBtn Clicked");
+                           }}>Home</NavButton>
                 <NavButton style={{color: selectedBtn === 'about' ? '#1090CB' : '#000000'}}
-                           onClick={() => setSelectedBtn('about')}>About Us</NavButton>
+                           onClick={() => {
+                               setSelectedBtn('about');
+                               alert("About Btn Clicked");
+                           }}>About Us</NavButton>
                 <NavButton style={{color: selectedBtn === 'services' ? '#1090CB' : '#000000'}}
-                           onClick={() => setSelectedBtn('services')}>Services</NavButton>
+                           onClick={() => {
+                               setSelectedBtn('services');
+                               alert("Services Btn Clicked");
+                           }}>Services</NavButton>
                 <NavButton style={{color: selectedBtn === 'blog' ? '#1090CB' : '#000000'}}
-                           onClick={() => setSelectedBtn('blog')}>Blog</NavButton>
-                <NavButton style={{
-                    background: "#1090CB", color: '#FFFFFF', maxHeight: '50px'
-                }}>Contact Us</NavButton>
+                           onClick={() => {
+                               setSelectedBtn('blog');
+                               alert("Blog Btn Clicked");
+                           }}
+                >Blog</NavButton>
+                <NavButton
+                    style={{background: "#1090CB", color: '#FFFFFF', maxHeight: '50px'}}
+                    onClick={() => {
+                        setSelectedBtn('contact');
+                        alert("Contact Btn Clicked");
+                    }}>Contact Us</NavButton>
 
             </NavList>
         </Wrapper>

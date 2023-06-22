@@ -23,12 +23,12 @@ const DetailSection = styled(Stack)(({theme}) => ({
     }
 }))
 
-const TitleSection = styled(Stack)(({theme}) => ({
+const TitleSection = styled(Stack)({
     flexDirection: 'row',
     alignItems: 'center'
-}))
+})
 
-const HappyIcon = styled(Stack)(({theme, bgColor}) => ({
+const HappyIcon = styled(Stack)(({ bgColor}) => ({
 
     justifyContent: 'center',
     alignItems: 'center',
@@ -41,18 +41,17 @@ const HappyIcon = styled(Stack)(({theme, bgColor}) => ({
 
 }))
 
-const Desc = styled(Typography)(({theme}) => ({
+const Desc = styled(Typography)({
     color: '#000000',
     fontWeight: "600",
     fontSize: "30px",
-}))
+})
 
-const SubDesc = styled(Typography)(({theme}) => ({
+const SubDesc = styled(Typography)({
     color: '#545454',
     fontWeight: "400",
     fontSize: "16px",
-
-}))
+})
 
 const Img = styled('img')(({theme, purpleBg}) => ({
     maxHeight: '480px',

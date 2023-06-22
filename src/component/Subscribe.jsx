@@ -1,5 +1,6 @@
 import {styled} from "@mui/material/styles";
 import {Button, Stack, TextField, Typography} from "@mui/material";
+import {useState} from "react";
 
 
 const Wrapper = styled(Stack)(({theme}) => ({
@@ -67,7 +68,7 @@ const Btn = styled(Button)(({theme}) => ({
     background: '#000000',
     height: '67px',
     width: '173px',
-    '&:hover':{
+    '&:hover': {
         backgroundColor: '#545454',
 
     },
@@ -88,6 +89,24 @@ const BtnText = styled(Typography)({
 
 export default function Subscribe() {
 
+    const [userEmail, setUserEmail] = useState('')
+
+
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+    const subscribeBtnClick = () => {
+
+        if (validateEmail(userEmail)) {
+            alert(`Subscribed for Email: ${userEmail}`)
+        } else
+            alert(`Invalid Email Plz check`)
+
+
+    }
+
 
     return (
         <>
@@ -96,8 +115,12 @@ export default function Subscribe() {
                 <CustomContainer spacing={4}>
                     <Heading> Lorem Ipsum is simply dummy text of the printing. </Heading>
                     <Stack flexDirection={'row'} alignItems={'center'}>
-                        <EmailTextField placeholder={'Enter your email'}></EmailTextField>
-                        <Btn>
+                        <EmailTextField placeholder={'Enter your email'}
+                                        value={userEmail}
+                                        onChange={(e) => setUserEmail(e.target.value)}
+
+                        />
+                        <Btn onClick={subscribeBtnClick}>
                             <BtnText> SUBSCRIBE </BtnText>
                         </Btn>
 

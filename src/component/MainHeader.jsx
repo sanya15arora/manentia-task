@@ -96,11 +96,17 @@ export default function MainHeader() {
                     background: "#1090CB",
                     color: '#FFFFFF',
                     marginRight: '16px'
-                }}>Contact Us</CustomButton>
+                }}
+                              onClick={() =>
+                                  alert("Contact Us Btn Clicked")
+                              }
+                >Contact Us</CustomButton>
 
                 <CustomButton variant="outlined" style={{
                     borderColor: "#1090CB"
-                }}>View more</CustomButton>
+                }} onClick={() =>
+                    alert("View More Btn Clicked")
+                }>View more</CustomButton>
             </BtnGroup>
         </DetailSection>
 

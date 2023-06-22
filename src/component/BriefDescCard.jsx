@@ -30,7 +30,7 @@ const DescCard = styled(Stack)(({theme, bgColor}) => ({
 
 }))
 
-const Title = styled(Typography)(({theme, textColor}) => ({
+const Title = styled(Typography)(({textColor}) => ({
     color: textColor,
     fontWeight: "600",
     fontSize: "25px",
@@ -38,7 +38,7 @@ const Title = styled(Typography)(({theme, textColor}) => ({
     textAlign: 'center'
 }))
 
-const Desc = styled(Typography)(({theme, textColor}) => ({
+const Desc = styled(Typography)(({textColor}) => ({
     color: textColor,
     fontWeight: "400",
     fontSize: "16px",
@@ -58,7 +58,7 @@ const Btn = styled(Button)({
 })
 
 
-const BellImg = styled('img')(({theme}) => ({
+const BellImg = styled('img')({
     position: 'relative',
     top: "62px",
     right: '-10px',
@@ -66,7 +66,7 @@ const BellImg = styled('img')(({theme}) => ({
     width: '120px',
     alignSelf: 'flex-end'
 
-}))
+})
 
 
 const briefList = [
@@ -74,13 +74,19 @@ const briefList = [
         title: 'Lorem Ipsum is simply dummy text.',
         desc: 'EXAMPLE COMPANY PVT LTD is a team of experienced mobile and web applications and website buildersmeasuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android & IOS.',
         btnText: 'View More',
-        showBell: false
+        showBell: false,
+        onBtnClick: function () {
+            alert("View More without Bell Click")
+        }
     },
     {
         title: 'Lorem Ipsum is simply dummy text.',
         desc: 'EXAMPLE COMPANY PVT LTD is a team of experienced mobile and web applications and website buildersmeasuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android & IOS.',
         btnText: 'View More',
-        showBell: true
+        showBell: true,
+        onBtnClick: function () {
+            alert("View More with Bell Click")
+        }
     }
 ]
 
@@ -104,6 +110,8 @@ export default function BriefDescCard() {
                         <Btn style={{
                             background: briefData.showBell ? '#fff' : "#1090CB",
                             color: briefData.showBell ? '#1090CB' : '#FFFFFF'
+                        }} onClick={() => {
+                            briefData.onBtnClick()
                         }}>  {briefData.btnText}</Btn>
                     </DescCard>
                 </Stack>

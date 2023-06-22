@@ -59,12 +59,10 @@ export default function CompanyListing() {
     return (<Wrapper>
             <Title> You will be in good Company</Title>
             <ListItem>
-
                 {companyLogo.map((logo) =>
                     <LogoImg src={logo} alt={"LOGO"}/>
                 )}
             </ListItem>
-
         </Wrapper>
     )
 

@@ -1,4 +1,4 @@
-import {Box, Divider, Link, Stack, Typography} from "@mui/material";
+import {Divider, Link, Stack, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 
 const Wrapper = styled(Stack)(({theme}) => ({
@@ -31,11 +31,14 @@ const HeadingText = styled(Typography)({
     fontSize: "17px",
 })
 
-const ListText = styled(Typography)({
+const ListText = styled(Typography)(({showPointer}) => ({
     color: '#515151',
     fontWeight: "400",
     fontSize: "16px",
-})
+    '&:hover': {
+        cursor: showPointer ? 'pointer' : 'default'
+    }
+}))
 
 const SocialMediaImg = styled(Stack)({
     width: "34px",
@@ -85,13 +88,11 @@ export default function Footer() {
             <SubSec spacing={2}>
                 <HeadingText>About us</HeadingText>
                 <Stack spacing={1}>
-                    <ListText>Lorem</ListText>
-                    <ListText>Portfolio</ListText>
 
-                    <ListText>Career</ListText>
-
-                    <ListText>Contact us</ListText>
-
+                    <ListText showPointer={true} onClick={() => alert("Lorem Clicked")}>Lorem</ListText>
+                    <ListText showPointer={true} onClick={() => alert("Portfolio Clicked")}>Portfolio</ListText>
+                    <ListText showPointer={true} onClick={() => alert("Career Clicked")}>Career</ListText>
+                    <ListText showPointer={true} onClick={() => alert("Contact Clicked")}>Contact us</ListText>
                 </Stack>
 
             </SubSec>
@@ -99,12 +100,10 @@ export default function Footer() {
                 <HeadingText> Contact us</HeadingText>
                 <ListText maxWidth={"282px"}>Lorem Ipsum is simply dummy text of the printing and typesetting
                     industry. </ListText>
-
                 <ListText>+908 89097 890</ListText>
-
             </SubSec>
-            <SubSec sx={{alignSelf:'flex-end'}}>
-                <Stack flexDirection={'row'} >
+            <SubSec sx={{alignSelf: 'flex-end'}}>
+                <Stack flexDirection={'row'}>
                     {socialMedia.map((data) =>
                         <Link href={data.link} target="_blank">
                             <SocialMediaImg>
@@ -113,7 +112,6 @@ export default function Footer() {
                         </Link>)}
                 </Stack>
             </SubSec>
-
         </Wrapper>
         <Divider/>
         <ListText textAlign={'center'} fontSize={"13px"} fontWeight={'400'} color={'#686868'}
