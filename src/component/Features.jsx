@@ -22,7 +22,7 @@ const ListItem = styled(Stack)(({theme}) => ({
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
         margin: '10px 0px',
-        alignContent:'flex-start',
+        alignContent: 'flex-start',
         justifyContent: 'space-between',
     }
 }))

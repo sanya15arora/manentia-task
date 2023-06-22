@@ -7,13 +7,10 @@ const Wrapper = styled(Stack)(({theme}) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 32px',
-    background: `url('/images/bg_header_img.png') no-repeat  left -140px center`,
-    backgroundSize: '250px 250px',
+    background: `url('/images/bg_yellow_img.png') no-repeat  left -40px center`,
     [theme.breakpoints.down('md')]: {
-        textAlign:'center',
-        background: `url('/images/bg_header_img.png') no-repeat  left -140px top`,
-        backgroundSize: '230px 230px',
-
+        textAlign: 'center',
+        background: `url('/images/bg_yellow_img.png') no-repeat  left -40px top`,
     }
 
 }))
@@ -35,7 +32,7 @@ const Title = styled(Typography)({
     color: '#000000',
     fontWeight: "500",
     fontSize: "24px",
-    alignText:'center'
+    alignText: 'center'
 })
 
 const LogoImg = styled('img')(({theme}) => ({
@@ -56,7 +53,7 @@ const companyLogo = [
 ]
 
 
-export default function CompanyCard() {
+export default function CompanyListing() {
 
 
     return (<Wrapper>

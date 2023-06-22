@@ -85,7 +85,7 @@ const BtnText = styled(Typography)({
 })
 
 
-export default function UserEmail() {
+export default function Subscribe() {
 
 
     return (

@@ -5,13 +5,12 @@ const Wrapper = styled(Stack)(({theme}) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: '70px',
+    paddingBottom: '70px',
+    background: `url('/images/bg_pink_img.png') no-repeat bottom right`,
     [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
         justifyContent: 'center',
     }
-
-
 }))
 
 
@@ -22,10 +21,10 @@ const DescCard = styled(Stack)(({theme, bgColor}) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    margin:'0 25px',
+    margin: '0 25px',
     background: bgColor ? bgColor : "#F4F4F4",
     [theme.breakpoints.down('md')]: {
-        margin:'0px',
+        margin: '0px',
         maxWidth: "460px",
     }
 

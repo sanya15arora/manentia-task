@@ -4,10 +4,11 @@ import './App.css'
 import {ThemeProvider, createTheme, Divider} from "@mui/material";
 import Features from "./component/Features";
 import MainHeader from "./component/MainHeader";
-import CompanyCard from "./component/CompanyCard";
-import UserEmail from "./component/UserEmail";
+import CompanyListing from "./component/CompanyListing";
+import Subscribe from "./component/Subscribe";
 import BriefDescCard from "./component/BriefDescCard";
 import Footer from "./component/Footer";
+import RecentActivity from "./component/RecentActivity";
 
 
 const theme = createTheme({
@@ -27,7 +28,8 @@ const theme = createTheme({
             lg: 1280,
             xl: 1920,
         },
-}});
+    }
+});
 const App = () => {
     return (
         <ThemeProvider theme={theme}>
@@ -36,9 +38,10 @@ const App = () => {
             <MainHeader/>
             <Features/>
             <Divider/>
+            <RecentActivity/>
             <BriefDescCard/>
-            <CompanyCard/>
-            <UserEmail/>
+            <CompanyListing/>
+            <Subscribe/>
             <Footer/>
         </ThemeProvider>
     )

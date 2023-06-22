@@ -72,9 +72,9 @@ const CardImg = styled('img')(({theme}) => ({
 
 }))
 
-const BgImg= styled('img')(({theme})=>({
+const BgImg = styled('img')(({theme}) => ({
     [theme.breakpoints.down('md')]: {
-       display:'none'
+        display: 'none'
     }
 
 }))
@@ -83,7 +83,7 @@ const BgImg= styled('img')(({theme})=>({
 export default function MainHeader() {
 
     return (<Wrapper>
-        <BgImg src={'/images/bg_green_img.png'} alt={'bg_green'} style={{alignSelf:'flex-end'}}/>
+        <BgImg src={'/images/bg_green_img.png'} alt={'bg_green'} style={{alignSelf: 'flex-end'}}/>
         <DetailSection spacing={4}>
             <Heading> Experienced <span style={{color: '#1090CB'}}>mobile and web</span> applications and website
                 builders measuring.</Heading>

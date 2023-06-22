@@ -5,7 +5,7 @@ import {styled} from '@mui/material/styles';
 
 const Wrapper = styled(Stack)(({theme}) => ({
     borderBottom: '1px #C4C4C4',
-    height: '100px',
+    height: '80px',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -44,7 +44,7 @@ export default function TopNav() {
 
     return (
         <Wrapper>
-            <img src={'/images/LOGO.png'} alt={"LOGO"} style={{width: '82px', height: '44px'}}/>
+            <img src={'/images/LOGO.png'} alt={"LOGO"} style={{width: '100px', height: '40px'}}/>
             <NavList>
                 <NavButton style={{color: selectedBtn === 'home' ? '#1090CB' : '#000000'}}
                            onClick={() => setSelectedBtn('home')}>Home</NavButton>
