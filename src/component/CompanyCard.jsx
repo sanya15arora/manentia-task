@@ -4,13 +4,14 @@ import {styled} from '@mui/material/styles';
 
 const Wrapper = styled(Stack)(({theme}) => ({
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 32px',
-    background: `url('/images/bg_header_img.png') no-repeat  left -40px center`,
+    background: `url('/images/bg_header_img.png') no-repeat  left -140px center`,
     backgroundSize: '250px 250px',
     [theme.breakpoints.down('md')]: {
-        background: `url('/images/bg_header_img.png') no-repeat  left -40px top`,
+        textAlign:'center',
+        background: `url('/images/bg_header_img.png') no-repeat  left -140px top`,
         backgroundSize: '230px 230px',
 
     }
@@ -19,13 +20,13 @@ const Wrapper = styled(Stack)(({theme}) => ({
 
 const ListItem = styled(Stack)(({theme}) => ({
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '100vw',
     [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
         alignContent: 'flex-start',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
     }
 }))
 
@@ -34,6 +35,7 @@ const Title = styled(Typography)({
     color: '#000000',
     fontWeight: "500",
     fontSize: "24px",
+    alignText:'center'
 })
 
 const LogoImg = styled('img')(({theme}) => ({
